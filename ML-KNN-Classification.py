@@ -1,10 +1,11 @@
-# K-Nearest Neighbors
+# K-Nearest Neighbors ML classification model
 
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 from sklearn import preprocessing
+
 
 '''
 About the dataset
@@ -16,7 +17,9 @@ The target field, called custcat, has four possible values that correspond to th
 Our objective is to build a classifier, to predict the class of unknown cases. We will use a specific type of classification called K nearest neighbour.
 '''
 
+
 url = "https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-ML0101EN-SkillsNetwork/labs/Module%203/data/teleCust1000t.csv"
+
 
 df = pd.read_csv(url)
 print(df.head(6))
@@ -45,7 +48,9 @@ X[0:5]
 y = df['custcat'].values
 y[0:5]
 
+
 # Train Test Split
+
 
 '''
 Out of Sample Accuracy is the percentage of correct predictions that the model makes on data that the model has NOT been trained on. 
@@ -59,6 +64,7 @@ After which, you train with the training set and test with the testing set.
 This will provide a more accurate evaluation on out-of-sample accuracy because the testing dataset is not part of the dataset that has been used to train the model. 
 It is more realistic for the real world problems.
 '''
+
 
 from sklearn.model_selection import train_test_split
 
